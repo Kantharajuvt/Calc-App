@@ -32,6 +32,7 @@ It allows users to perform basic arithmetic operations through an interactive an
 ``bash
 git clone [https://github.com/Kantharajuvt/Calc-App.git]
 cd Calci-app
+
 2️⃣ Configure Database
 Create a new MySQL database (e.g., calci_db)
 
