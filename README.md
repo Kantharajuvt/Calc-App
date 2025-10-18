@@ -33,8 +33,10 @@ It allows users to perform basic arithmetic operations through an interactive an
 ## ⚙️ Installation and Setup
 
 ### 1️⃣ Clone the Repository
-``bash
+bash
+
 git clone [https://github.com/Kantharajuvt/Calc-App.git]
+
 cd Calci-app
 
 
