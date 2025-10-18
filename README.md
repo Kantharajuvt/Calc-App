@@ -5,6 +5,8 @@ It allows users to perform basic arithmetic operations through an interactive an
 
 ---
 
+
+
 ## 🚀 Features
 
 - ➕ Perform basic arithmetic operations (Addition, Subtraction, Multiplication, Division)
@@ -13,6 +15,8 @@ It allows users to perform basic arithmetic operations through an interactive an
 - ⚙️ Built with **Spring Boot** for fast and scalable backend setup
 
 ---
+
+
 
 ## 🛠️ Technologies Used
 
@@ -33,9 +37,11 @@ It allows users to perform basic arithmetic operations through an interactive an
 git clone [https://github.com/Kantharajuvt/Calc-App.git]
 cd Calci-app
 
+
+
+
 2️⃣ Configure Database
 Create a new MySQL database (e.g., calci_db)
-
 Update your application.properties file:
 
 properties
@@ -44,6 +50,9 @@ spring.datasource.url=jdbc:mysql://localhost:3306/calci_db
 spring.datasource.username=your_mysql_username
 spring.datasource.password=your_mysql_password
 spring.jpa.hibernate.ddl-auto=update
+
+
+
 
 3️⃣ Build and Run the App
 bash
@@ -61,17 +70,27 @@ View results instantly
 
 Check calculation history stored in the database
 
+
+
 📸 Screenshots (optional)
 Add screenshots of your UI or pages here.
+
+
+
 
 🤝 Contributing
 Contributions are welcome!
 If you’d like to improve this project, feel free to fork the repo and submit a pull request.
 
+
+
+
 👤 Author
 Kantharaju VT
 📧 kantharajkantha4862@gmail.com
+
 🔗 https://www.linkedin.com/in/kantharaju-vt-123bb92aa/
+
 🔗 https://github.com/Kantharajuvt
 
 📄 License
