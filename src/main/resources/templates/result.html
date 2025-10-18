@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Calculator Application</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.2);
+      width: 400px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .result-box {
+      background: #f0f8ff;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #d0e7ff;
+    }
+    .result-box h2 {
+      margin-top: 0;
+      color: #007bff;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      text-align: left;
+    }
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    .buttons input[type="submit"] {
+      padding: 10px 20px;
+      margin: 8px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s, opacity 0.3s;
+      color: white;
+    }
+    .buttons input[value="ADD"] { background: #28a745; }
+    .buttons input[value="SUB"] { background: #dc3545; }
+    .buttons input[value="MUL"] { background: #fd7e14; }
+    .buttons input[value="DIV"] { background: #007bff; }
+    .buttons input:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>WELCOME TO CALCULATOR APPLICATION</h1>
+
+    <!-- Result Section -->
+    <div class="result-box" th:if="${res != null}">
+      <h2>Results</h2>
+      <p>Operation: <strong><span th:text="${op}"></span></strong></p>
+      <p>Numbers: <span th:text="${n1}"></span> and <span th:text="${n2}"></span></p>
+      <p><strong>Result = <span th:text="${res}"></span></strong></p>
+    </div>
+
+    <!-- Form Section -->
+    <form action="calculate" method="post">
+      <div>
+        <label>Num 1</label>
+        <input type="number" name="num1" required />
+      </div>
+      <div>
+        <label>Num 2</label>
+        <input type="number" name="num2" required />
+      </div>
+      <div class="buttons">
+        <input type="submit" value="ADD" name="operation"/>
+        <input type="submit" value="SUB" name="operation"/>
+        <input type="submit" value="MUL" name="operation"/>
+        <input type="submit" value="DIV" name="operation"/>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
